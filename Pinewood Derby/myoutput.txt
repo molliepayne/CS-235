@@ -1,0 +1,19 @@
+Start Size should be zero 0
+addCar got Speedy R 20
+Adding Rocket
+In Car Constructor Speedy 20
+Size should be 1 1
+addCar got Slow P 10
+Adding Panda
+In Car Constructor Slow 10
+Size should be 2 2
+In Car getName Speedy
+In Car getName Speedy
+In Car getName Slow
+Compare 40 5
+In Car getName Speedy
+Speedy Won!
+In Car getName Slow
+In Car getName Speedy
+In Car getName Slow
+Removed car2 Size should be one 1
