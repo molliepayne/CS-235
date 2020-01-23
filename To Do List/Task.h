@@ -3,7 +3,7 @@
 
 class Task: public TaskInterface {
    private: 
-    string date;
+        string date;
         string desc;
         
     public:
@@ -16,7 +16,5 @@ class Task: public TaskInterface {
     	~Task() {}
     	string getDate() const;
     	string getDesc() const;
-	
 
-       
 };

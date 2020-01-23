@@ -1,6 +1,6 @@
-#include "ToDoList.h"
+#include "TodoList.h"
 
-void ToDoList::add(string _duedate, string _task){
+void TodoList::add(string _duedate, string _task){
     //cout <<" in add: " << _duedate << "  " << _task << endl;
     Task *myTask = new Task(_duedate, _task);
     tasks.push_back(myTask);
@@ -9,7 +9,7 @@ void ToDoList::add(string _duedate, string _task){
     Removes an item from the todo list with the specified task name   
     *    *   Returns 1 if it removes an item, 0 otherwise   
     */    
-int ToDoList::remove(string _task){
+int TodoList::remove(string _task){
     //cout << "in remove: " << _task << endl;
     auto it = tasks.begin();
 	while (it != tasks.end())
@@ -18,7 +18,7 @@ int ToDoList::remove(string _task){
 	    if((*it)->getDesc() == _task){
 	        //cout << "removing task "<<endl;
 	        tasks.erase(it);
-	        printTodoList();
+	        //printTodoList();
 	        return 1;
 	    }
         it++;
@@ -28,8 +28,8 @@ int ToDoList::remove(string _task){
     /*    *   
     Prints out the full todo list to the console    
     */    
-void ToDoList::printTodoList(){
-    cout << "print list" << endl;
+void TodoList::printTodoList(){
+    //cout << "print list" << endl;
    for (int i=0; i<tasks.size(); i++){
         Task* curTask = tasks.at(i);
         cout << curTask->getDate() << endl;
@@ -41,7 +41,7 @@ void ToDoList::printTodoList(){
     /*    *   
     Prints out all items of a todo list with a particular due date (specified by _duedate)    
     */   
-void ToDoList::printDaysTasks(string _date){
+void TodoList::printDaysTasks(string _date){
     cout << "Tasks for " << _date << ": " << endl;
     bool found = false;
      auto it = tasks.begin();

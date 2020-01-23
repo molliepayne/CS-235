@@ -5,11 +5,11 @@
 #include <fstream>
 #include <sstream>
 
-class ToDoList: public TodoListInterface {
+class TodoList: public TodoListInterface {
     protected:
     vector<Task*> tasks;
     public:
-	ToDoList() {
+	TodoList() {
 		//cout << "In To Do List  Constructor "<<endl;
 		//read from file into vector
 		ifstream infile("TODOList.txt");
@@ -26,7 +26,7 @@ class ToDoList: public TodoListInterface {
     	   infile.close();
 		}
 	};
-	~ToDoList() {
+	~TodoList() {
 	    //cout << "in desctructor" << endl;
 	    //write to file from vector
     	ofstream outfile("TODOList.txt");
